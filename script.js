@@ -2,6 +2,10 @@
 var nome 
 var salario 
 var porcentagem 
+var decisao = true
+
+while(decisao){
+
 
 quest()
 
@@ -11,6 +15,8 @@ console.log(`Nome: ${nome}, Salário Atual:  ${salario}`)
 informar()
 
 console.log(Calculator(salario, porcentagem))
+
+choice()
 
 
 
@@ -44,6 +50,14 @@ function informar(){
 function Calculator(salario){
 
     console.log(`A Porcetagem é ${porcentagem}`)
-    return (`Parábens você teve um aumento ! Salario Atual: ${salario * porcentagem}`)
-   
+    return (`Parábens ${nome} você teve um aumento ! Salário antigo: ${salario}   Salario Atual: ${salario * porcentagem}`)
+}
+
+function choice(){
+    decisao = prompt("Deseja calcular novamente com novas informações ?")
+    if(decisao == "Não"){
+        return decisao = false
+    }
+}
+
 }
